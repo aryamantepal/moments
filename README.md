@@ -3,7 +3,7 @@ music for the photos you see
 
 # Moments 🎶📷
 
-**Moments** is a minimalist, vibe-based social platform where users post photos paired with music to capture how they felt in that instant.
+**Moments** is a minimalist, vibe-based mobile app where users post photos paired with music to capture how they felt in that instant. Think of it as a cross between Spotify and Beli — every photo has a song that defines the moment.
 
 > Think of it as a cross between Spotify and Beli — every photo has a song that defines the moment.
 
