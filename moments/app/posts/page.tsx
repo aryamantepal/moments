@@ -1,5 +1,8 @@
 import prisma from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 export default async function Posts() {
     const posts = await prisma.post.findMany({
         include: {
