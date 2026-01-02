@@ -2,19 +2,26 @@ import Form from "next/form";
 import prisma from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { put } from '@vercel/blob';
 
 export default function NewPost() {
     async function createPost(formData: FormData) {
         "use server";
 
-        const title = formData.get("title") as string;
-        const content = formData.get("content") as string;
+        const caption = formData.get("caption") as string;
+        const location = formData.get("location") as string;
+        const image = formData.get("image") as File;
 
-        await prisma.post.create({
+        const blob = await put(image.name, image, {
+            access: 'public',
+        });
+
+        await prisma.moment.create({
             data: {
-                title,
-                content,
-                authorId: 1,
+                imageUrl: blob.url,
+                caption,
+                location,
+                userId: "1",
             },
         });
 
