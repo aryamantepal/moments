@@ -1,5 +1,6 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
+import Image from "next/image";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -28,10 +29,15 @@ export default async function Moments() {
                         className="group"
                     >
                         <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-200">
-                            <img
+                            <Image
                                 src={moment.imageUrl}
                                 alt={moment.caption || 'Moment'}
-                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                width={400}
+                                height={400}
+                                className="w-full h-full object-cover"
+                                loading="lazy" // Only load when scrolled into view
+                                placeholder="blur"
+                                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
                             />
 
                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity duration-300 flex items-center justify-center">
