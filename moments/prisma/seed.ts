@@ -14,19 +14,6 @@ const userData: Prisma.UserCreateInput[] = [
     {
         name: "Alice",
         email: "alice@prisma.io",
-        posts: {
-            create: [
-                {
-                    title: "Join the Prisma Discord",
-                    content: "https://pris.ly/discord",
-                    published: true,
-                },
-                {
-                    title: "Prisma on YouTube",
-                    content: "https://pris.ly/youtube",
-                },
-            ],
-        },
         moments: {
             create: [
                 {
@@ -45,15 +32,6 @@ const userData: Prisma.UserCreateInput[] = [
     {
         name: "Bob",
         email: "bob@prisma.io",
-        posts: {
-            create: [
-                {
-                    title: "Follow Prisma on Twitter",
-                    content: "https://www.twitter.com/prisma",
-                    published: true,
-                },
-            ],
-        },
         moments: {
             create: [
                 {
