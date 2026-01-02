@@ -21,7 +21,7 @@ export default function NewPost() {
                 imageUrl: blob.url,
                 caption,
                 location,
-                userId: "1",
+                userId: 1,
             },
         });
 
