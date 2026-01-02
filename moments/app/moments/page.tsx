@@ -3,8 +3,8 @@ import prisma from "@/lib/prisma";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-export default async function Posts() {
-    const posts = await prisma.post.findMany({
+export default async function Moments() {
+    const moments = await prisma.moment.findMany({
         include: {
             author: true,
         },
@@ -16,11 +16,11 @@ export default async function Posts() {
                 Posts
             </h1>
             <ul className="`font-(family-name:--font-geist-sans)` max-w-2xl space-y-4">
-                {posts.map((post) => (
-                    <li key={post.id}>
-                        <span className="font-semibold">{post.title}</span>
+                {moments.map((moment) => (
+                    <li key={moment.id}>
+                        <span className="font-semibold">{moment.caption}</span>
                         <span className="text-sm text-gray-600 ml-2">
-                            by {post.author.name}
+                            by {moment.author.name}
                         </span>
                     </li>
                 ))}
