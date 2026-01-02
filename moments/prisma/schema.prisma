@@ -30,6 +30,15 @@ model Post {
   imageURL  String?
 }
 
+model Moment {
+  id        String   @id @default(cuid())
+  imageUrl  String
+  caption   String?
+  location  String?
+  createdAt DateTime @default(now())
+  userId    String
+}
+
 // model Moment {
 //   id         Int      @id @default(autoincrement())
 //   imageUrl   String   // Required - the photo
