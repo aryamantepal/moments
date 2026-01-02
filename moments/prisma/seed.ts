@@ -27,6 +27,20 @@ const userData: Prisma.UserCreateInput[] = [
                 },
             ],
         },
+        Moment: {
+            create: [
+                {
+                    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+                    caption: "Mountain sunrise 🌄",
+                    location: "Swiss Alps",
+                },
+                {
+                    imageUrl: "https://images.unsplash.com/photo-1551632811-561732d1e306",
+                    caption: "Coffee time ☕",
+                    location: "Brooklyn",
+                },
+            ],
+        },
     },
     {
         name: "Bob",
@@ -37,6 +51,15 @@ const userData: Prisma.UserCreateInput[] = [
                     title: "Follow Prisma on Twitter",
                     content: "https://www.twitter.com/prisma",
                     published: true,
+                },
+            ],
+        },
+        Moment: {
+            create: [
+                {
+                    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+                    caption: "Beach day 🏖️",
+                    location: "Malibu",
                 },
             ],
         },
